@@ -31,6 +31,7 @@
     var interest = form.querySelector('[name="interest"]');
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+      if (form.dataset.preview) { status.textContent = 'This is a preview. The form sends on the live site.'; status.classList.add('show'); return; }
       var opt = interest ? interest.options[interest.selectedIndex] : null;
       var who = (opt && opt.dataset.agent) || 'karen';
       var endpoint = form.dataset[who] || form.getAttribute('action');

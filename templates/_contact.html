@@ -16,7 +16,7 @@
         {% endfor %}
       </div>
     </div>
-    <form id="lead-form" action="{{ people.karen.formspree }}" method="POST" data-karen="{{ people.karen.formspree }}" data-britney="{{ people.britney.formspree }}">
+    <form id="lead-form"{% if preview %} data-preview="1"{% else %} action="{{ people.karen.formspree }}" method="POST" data-karen="{{ people.karen.formspree }}" data-britney="{{ people.britney.formspree }}"{% endif %}>
       <div class="row">
         <label>Name <input type="text" name="name" required autocomplete="name" /></label>
         <label>Phone <input type="tel" name="phone" required autocomplete="tel" /></label>
