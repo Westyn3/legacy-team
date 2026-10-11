@@ -86,10 +86,11 @@ def main():
         """Site-internal link. '/milton/' in production, a relative file path in preview."""
         if not args.preview:
             return path
-        rel = path.strip("/")
+        rel, _, frag = path.partition("#")
+        rel = rel.strip("/")
         if "." not in rel.rsplit("/", 1)[-1]:
             rel = (rel + "/index.html").lstrip("/")
-        return "../" * ctx["depth"] + rel
+        return "../" * ctx["depth"] + rel + ("#" + frag if frag else "")
 
     @pass_context
     def a(ctx, path):
