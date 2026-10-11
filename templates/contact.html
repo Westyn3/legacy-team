@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Contact The Legacy Team | Karen Hilliard & Britney Javens{% endblock %}
+{% block description %}Call, text or message The Legacy Team. Karen Hilliard (770) 316-0788 and Britney Javens (678) 780-8238, Keller Williams North Atlanta, Alpharetta, GA.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero plain">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Contact</li></ol>
+      <h1 class="display d1">Call either of us.</h1>
+      <p class="lede">Call or text every day from 7 am to 9 pm. We meet over Zoom, at the Keller Williams North Atlanta office in Alpharetta, or at your home.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
+{% block contact %}
+{% include "_contact.html" %}
+<section class="section-tight">
+  <div class="wrap split">
+    <h2 class="display d3">The office</h2>
+    <dl class="facts">
+      <div><dt>Brokerage</dt><dd>{{ site.brokerage.name }}</dd></div>
+      <div><dt>Address</dt><dd>{{ site.brokerage.street }}, {{ site.brokerage.city }}, {{ site.brokerage.state }} {{ site.brokerage.zip }}</dd></div>
+      <div><dt>Office phone</dt><dd><a class="link" href="tel:{{ site.brokerage.tel }}">{{ site.brokerage.phone }}</a></dd></div>
+      <div><dt>Showings</dt><dd>By appointment, from Buckhead to Blue Ridge</dd></div>
+    </dl>
+  </div>
+</section>
+{% endblock %}

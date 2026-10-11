@@ -1,0 +1,106 @@
+# The Legacy Team — site settings. Everything that changes site-wide lives here.
+
+name: "The Legacy Team"
+tagline: "Luxury real estate from Buckhead to Blue Ridge"
+
+# TODO before launch: set the real domain (no trailing slash). The build writes CNAME,
+# canonicals, sitemap and schema from this one value.
+url: "https://www.thelegacyteamga.com"
+write_cname: false          # flip to true once the domain above is the real one
+
+ga_id: ""                   # Google Analytics 4 ID (G-XXXXXXX). Blank = no tracking tag.
+
+brokerage:
+  name: "Keller Williams Realty North Atlanta"
+  street: "925 North Point Parkway, Suite 200"
+  city: "Alpharetta"
+  state: "GA"
+  zip: "30005"
+  phone: "(770) 663-7291"
+  tel: "+17706637291"
+  lat: 34.0754
+  lng: -84.2941
+
+social:
+  instagram: "https://www.instagram.com/thelegacyteam_/"
+  kw_team: "https://legacyteam.kw.com/"
+
+people:
+  karen:
+    name: "Karen Hilliard"
+    first: "Karen"
+    role: "Luxury, Lake Lanier and the mountains"
+    phone: "(770) 316-0788"
+    tel: "+17703160788"
+    email: "khilliard@kw.com"
+    photo: "karen.jpg"
+    site: "https://northgaluxuryrealtor.com/"
+    calendly: "https://calendly.com/khilliard-kw"
+    idx: "https://karenhilliard.georgiamls.com/idxsearch/"
+    formspree: "https://formspree.io/f/mvkokeva"
+    reviews: 99
+    elfsight: "e931072b-f264-4abd-ad0b-be11f5a7aa60"
+    google: "https://www.google.com/search?q=Karen+Hilliard+Realtor+-+Keller+Williams+North+Atlanta"
+    same_as:
+      - "https://northgaluxuryrealtor.com/"
+      - "https://kw.com/agent/karen-hilliard/829485"
+      - "https://www.zillow.com/profile/Karenhilliard1"
+      - "https://www.realtor.com/realestateagents/5fedf42346d39e00112a7d43"
+      - "https://www.homes.com/real-estate-agents/karen-hilliard/8vegeq2/"
+      - "https://www.georgiamls.com/real-estate-agents/HILLIARDKAR"
+      - "https://www.linkedin.com/in/karen-hilliard-realtor-085a55300/"
+      - "https://www.youtube.com/@KarenHilliardRealtor"
+  britney:
+    name: "Britney Javens"
+    first: "Britney"
+    role: "North Atlanta and intown"
+    phone: "(678) 780-8238"
+    tel: "+16787808238"
+    email: "Britneyj@kw.com"
+    photo: "britney.jpg"
+    site: "https://northatlantarealtor.homes/"
+    calendly: "https://calendly.com/britneysellsatl/"
+    idx: "https://javensbrit.georgiamls.com/idxsearch/"
+    formspree: "https://formspree.io/f/xjglzlno"
+    reviews: 91
+    elfsight: "81461d18-bb85-4cce-a69b-d997c87cfb5f"
+    google: "https://www.google.com/search?q=Britney+Javens+Realtor"
+    same_as:
+      - "https://northatlantarealtor.homes/"
+      - "https://britneyj.kw.com/"
+      - "https://www.zillow.com/profile/Britneysellsatl"
+      - "https://www.realtor.com/realestateagents/631116af437786b96006a407"
+      - "https://www.georgiamls.com/real-estate-agents/JAVENSBRIT"
+      - "https://www.instagram.com/britneysellsatl/"
+      - "https://www.linkedin.com/in/britneysellsatl/"
+      - "https://www.youtube.com/@britneysellsatl"
+
+# South to north. This order drives the corridor line on the homepage and the communities page.
+regions:
+  - key: "north-atlanta"
+    name: "Intown and North Atlanta"
+    lead_line: "Britney leads, from Buckhead up GA-400."
+    image: "neighborhood-aerial.jpg"
+    image_alt: "Aerial view of a wooded North Atlanta neighborhood"
+    communities: [buckhead, brookhaven, chamblee, sandy-springs, norcross, duluth, roswell, johns-creek, alpharetta, milton, cumming]
+  - key: "lake-lanier"
+    name: "Lake Lanier"
+    lead_line: "Karen leads. She has lived on the lake for more than twelve years."
+    image: "lake-aerial.jpg"
+    image_alt: "Aerial view of Lake Lanier coves and docks"
+    communities: [buford, flowery-branch, gainesville, lake-lanier]
+  - key: "mountains"
+    name: "The mountains"
+    lead_line: "Karen leads, with a builder's eye for land and cabins."
+    image: "mountain-farm.jpg"
+    image_alt: "Aerial view of pasture and foothills in the North Georgia mountains"
+    communities: [dawsonville, dahlonega, blue-ridge]
+
+# Optional per-community hero image overrides (otherwise the region image is used)
+community_images:
+  cumming: ["lake-home.jpg", "Lakefront home above the water in Forsyth County"]
+  lake-lanier: ["lake-estate.jpg", "Brick estate with a private dock on Lake Lanier"]
+  milton: ["stone-estate.jpg", "Stone estate home with a circular drive in North Fulton"]
+  alpharetta: ["modern-estate.jpg", "Modern estate home on a lawn in North Georgia"]
+  buckhead: ["townhomes.jpg", "Brick townhomes on an intown Atlanta street"]
+  gainesville: ["lake-aerial.jpg", "Aerial view of Lake Lanier coves and docks"]

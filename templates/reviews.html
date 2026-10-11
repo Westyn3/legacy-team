@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Reviews of Karen Hilliard & Britney Javens | The Legacy Team{% endblock %}
+{% block description %}{{ site.total_reviews }} five-star Google reviews between Karen Hilliard and Britney Javens of The Legacy Team at Keller Williams North Atlanta. Read them here.{% endblock %}
+{% block head %}{% if not preview %}<script src="https://elfsightcdn.com/platform.js" async></script>{% endif %}{% endblock %}
+{% block content %}
+<section class="on-dark page-hero plain">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Reviews</li></ol>
+      <h1 class="display d1">{{ site.total_reviews }} reviews. All five stars.</h1>
+      <p class="lede">Each of us keeps her own Google profile, so the reviews below are shown by agent. They come straight from Google and we do not edit them.</p>
+    </div>
+  </div>
+</section>
+{% for key in ['karen', 'britney'] %}
+{% set p = people[key] %}
+<section class="section{% if loop.index is even %} on-stone{% endif %}">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">{{ p.name }}</h2>
+      <p class="soft">5.0 across {{ p.reviews }} Google reviews. <a class="link" href="{{ p.google }}" target="_blank" rel="noopener">See {{ p.first }}'s reviews on Google</a></p>
+    </div>
+    {% if preview %}
+    <p class="soft">The live Google review feed for {{ p.first }} loads here on the published site.</p>
+    {% else %}
+    <div class="elfsight-app-{{ p.elfsight }}" data-elfsight-app-lazy></div>
+    {% endif %}
+  </div>
+</section>
+{% endfor %}
+{% endblock %}

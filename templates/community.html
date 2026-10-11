@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% set lead = people[c.lead] if c.lead != 'both' else none %}
+{% set idx = people.britney.idx if c.region == 'north-atlanta' else people.karen.idx %}
+{% block title %}{{ c.seo_title }}{% endblock %}
+{% block description %}{{ c.description }}{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li><a href="{{ u('/communities/') }}">Communities</a></li><li>{{ c.name }}</li></ol>
+      <h1 class="display d2">{{ c.headline }}</h1>
+      <p class="lede">{{ c.lede }}</p>
+      <div class="actions">
+        <a class="btn" href="{{ idx }}" target="_blank" rel="noopener">Search {{ c.name }} listings</a>
+        <a class="btn btn-ghost" href="#contact">Ask us about {{ c.name }}</a>
+      </div>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/' + c.image) }}" alt="{{ c.image_alt }}" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <dl class="facts">
+        <div><dt>County</dt><dd>{{ c.county }}</dd></div>
+        <div><dt>Part of</dt><dd>{{ c.region_name }}</dd></div>
+        <div><dt>Known for</dt><dd>{{ c.known_for | join(', ') }}</dd></div>
+        <div><dt>Prices</dt><dd>{{ c.price_note }}</dd></div>
+        <div><dt>Who leads</dt><dd>{% if lead %}{{ lead.name }}, <a class="link" href="tel:{{ lead.tel }}">{{ lead.phone }}</a>{% else %}Karen and Britney together{% endif %}</dd></div>
+      </dl>
+    </div>
+    <div class="prose lede">{{ c.body_html }}</div>
+  </div>
+</section>
+
+<section class="section on-stone">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">Where to look in {{ c.name }}.</h2>
+      <p class="soft">The neighborhoods and pockets our clients ask about most.</p>
+    </div>
+    <ul class="items">
+      {% for n in c.neighborhoods %}
+      <li><h3 class="display d4">{{ n.name }}</h3><p>{{ n.text }}</p></li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Questions buyers and sellers ask.</h2>
+    <div class="faq">
+      {% for f in c.faqs %}
+      <details{% if loop.first %} open{% endif %}><summary>{{ f.q }}</summary><p>{{ f.a }}</p></details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section-tight on-stone">
+  <div class="wrap">
+    <h2 class="display d3">Nearby on the corridor</h2>
+    <div class="chips mt">
+      {% for s in c.nearby %}<a href="{{ u(communities[s].url) }}">{{ communities[s].name }}</a>{% endfor %}
+      <a href="{{ u('/communities/') }}">All communities</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

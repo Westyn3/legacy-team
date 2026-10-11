@@ -1,0 +1,45 @@
+<section class="section on-dark" id="contact">
+  <div class="wrap contact">
+    <div>
+      <h2 class="display d2">Tell us where you're headed.</h2>
+      <p class="lede mt soft">Your message goes straight to the one of us who leads that market, and the other stays on the file from the first call to closing.</p>
+      <div class="people">
+        {% for key in ['karen', 'britney'] %}
+        {% set p = people[key] %}
+        <div>
+          <span class="display d4">{{ p.name }}</span>
+          <span class="small">{{ p.role }}</span>
+          <a href="tel:{{ p.tel }}">{{ p.phone }}</a>
+          <a href="mailto:{{ p.email }}">{{ p.email }}</a>
+          <a class="link" href="{{ p.calendly }}" target="_blank" rel="noopener">Book a consultation with {{ p.first }}</a>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <form id="lead-form" action="{{ people.karen.formspree }}" method="POST" data-karen="{{ people.karen.formspree }}" data-britney="{{ people.britney.formspree }}">
+      <div class="row">
+        <label>Name <input type="text" name="name" required autocomplete="name" /></label>
+        <label>Phone <input type="tel" name="phone" required autocomplete="tel" /></label>
+      </div>
+      <label>Email <input type="email" name="email" required autocomplete="email" /></label>
+      <label>What can we help with?
+        <select name="interest">
+          <option data-agent="britney">Buying in North Atlanta or intown</option>
+          <option data-agent="britney">Selling in North Atlanta or intown</option>
+          <option data-agent="karen">A luxury home or estate</option>
+          <option data-agent="karen">Lake Lanier waterfront</option>
+          <option data-agent="karen">A mountain home or cabin</option>
+          <option data-agent="karen">Land, a lot or a new build</option>
+          <option data-agent="karen">Relocating to North Georgia</option>
+          <option data-agent="karen" selected>Not sure yet</option>
+        </select>
+      </label>
+      <label>Anything we should know <textarea name="message" placeholder="Where you're looking, your timing, the address you're thinking of selling"></textarea></label>
+      <input type="hidden" name="_subject" value="New lead from The Legacy Team website" />
+      <input type="hidden" name="page" value="{{ path }}" />
+      <div class="actions"><button class="btn" type="submit">Send message</button></div>
+      <p class="form-status" id="form-status" role="status"></p>
+      <p class="form-note">Available every day, 7 am to 9 pm.</p>
+    </form>
+  </div>
+</section>

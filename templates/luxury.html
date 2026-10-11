@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}North Georgia Luxury Homes & Estates | The Legacy Team{% endblock %}
+{% block description %}Luxury homes from Buckhead and Milton to Lake Lanier and Blue Ridge. The Legacy Team represents estate buyers and sellers with discretion and due diligence.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Luxury homes</li></ol>
+      <h1 class="display d1">Luxury homes and estates.</h1>
+      <p class="lede">Equestrian acreage in Milton, gated golf in Alpharetta and Cumming, deep water on Lake Lanier and long views in Blue Ridge. North Georgia has several luxury markets, and we work in each of them.</p>
+      <div class="actions"><a class="btn" href="{{ people.karen.idx }}" target="_blank" rel="noopener">Search listings over $1M</a><a class="btn btn-ghost" href="#contact">Speak with Karen</a></div>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/stone-estate.jpg') }}" alt="Stone estate home with a circular drive in North Fulton" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <dl class="facts">
+        <div><dt>Entry point</dt><dd>About $1M in Alpharetta, Cumming and on Lake Lanier</dd></div>
+        <div><dt>Milton estates</dt><dd>From about $1.5M</dd></div>
+        <div><dt>Mountains</dt><dd>Near $1M for long-range-view homes</dd></div>
+        <div><dt>Who leads</dt><dd>Karen Hilliard, <a class="link" href="tel:{{ people.karen.tel }}">{{ people.karen.phone }}</a></dd></div>
+      </dl>
+    </div>
+    <div class="prose lede">
+      <p>A seven-figure home in Milton and a seven-figure home on the lake have different buyers, different comparables and different things that can go wrong. Pricing one against the other is how sellers leave money behind and buyers overpay.</p>
+      <p>Karen leads our luxury work. Her construction management background matters most at this level, because estates come with barns, pools, outbuildings, wells, septic systems, docks and mechanical systems that a standard inspection may not fully cover. She evaluates them before a client commits.</p>
+      <p>South of the lake, Britney works the upper end of Buckhead, Brookhaven, Sandy Springs and Johns Creek, and the two of us share Alpharetta and Milton.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section on-stone">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">Four luxury markets.</h2>
+      <p class="soft">Each links to the communities where we see the most activity.</p>
+    </div>
+    <ul class="items">
+      <li><h3 class="display d4">Milton and Alpharetta estates</h3><p>The Manor, White Columns, Windward and the equestrian acreage along Birmingham Highway. <a class="link" href="{{ u('/milton/') }}">Milton</a>, <a class="link" href="{{ u('/alpharetta/') }}">Alpharetta</a></p></li>
+      <li><h3 class="display d4">Lake Lanier waterfront</h3><p>Deep-water estates at Harbour Point, Marina Bay and Chattahoochee Country Club, and on the Cumming and Dawsonville shores. <a class="link" href="{{ u('/lake-lanier/') }}">Lake Lanier</a>, <a class="link" href="{{ u('/gainesville/') }}">Gainesville</a></p></li>
+      <li><h3 class="display d4">South Forsyth</h3><p>Gated and golf communities and estate homes in Cumming, with Forsyth County schools and GA-400 access. <a class="link" href="{{ u('/cumming/') }}">Cumming</a></p></li>
+      <li><h3 class="display d4">Mountain luxury</h3><p>Long-range-view homes in Blue Ridge, Achasta in Dahlonega, and Big Canoe. <a class="link" href="{{ u('/blue-ridge/') }}">Blue Ridge</a>, <a class="link" href="{{ u('/dahlonega/') }}">Dahlonega</a></p></li>
+      <li><h3 class="display d4">Intown addresses</h3><p>Buckhead, Historic Brookhaven and Sandy Springs, led by Britney. <a class="link" href="{{ u('/buckhead/') }}">Buckhead</a>, <a class="link" href="{{ u('/brookhaven/') }}">Brookhaven</a>, <a class="link" href="{{ u('/sandy-springs/') }}">Sandy Springs</a></p></li>
+      <li><h3 class="display d4">Golf and country club communities</h3><p>From Johns Creek and Duluth up through Milton and Cumming. <a class="link" href="{{ u('/johns-creek/') }}">Johns Creek</a>, <a class="link" href="{{ u('/duluth/') }}">Duluth</a></p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section on-dark on-deep">
+  <div class="wrap quote">
+    <blockquote>“Luxury clients don't need more listings. They need someone who knows which one is actually worth the number, and why.”</blockquote>
+    <cite>Karen Hilliard</cite>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Questions at this price point.</h2>
+    <div class="faq">
+      <details open><summary>How do you market a luxury listing?</summary><p>With architectural and drone photography, cinematic video and staging guidance, priced on true luxury comparables. We put the listing in front of our luxury and relocation contacts and the out-of-state buyers who make up a growing share of this market, and one of us handles every showing.</p></details>
+      <details><summary>Do you work with buyers who live out of state?</summary><p>Often. We run video tours, coordinate due diligence remotely and manage closings for clients who cannot be here for each step.</p></details>
+      <details><summary>What is different about due diligence on an estate?</summary><p>There is more of everything. Wells and septic systems sized for the home, permits for pools and outbuildings, dock permits on the lake, and the condition of barns and pastures on equestrian property all need a close look.</p></details>
+      <details><summary>Can you keep a sale private?</summary><p>Yes. Some sellers prefer discreet marketing to a known circle of buyers and agents before or instead of a public listing. Tell us what you need and we will explain the trade-offs.</p></details>
+    </div>
+  </div>
+</section>
+{% endblock %}

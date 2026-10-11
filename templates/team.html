@@ -1,0 +1,88 @@
+{% extends "base.html" %}
+{% block title %}Karen Hilliard & Britney Javens | The Legacy Team Realtors{% endblock %}
+{% block description %}Meet The Legacy Team: Karen Hilliard and her daughter Britney Javens, Keller Williams North Atlanta Realtors covering Buckhead to Lake Lanier and Blue Ridge.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>The team</li></ol>
+      <h1 class="display d1">Two generations, one file.</h1>
+      <p class="lede">The Legacy Team is Karen Hilliard and her daughter, Britney Javens. Both are Realtors with Keller Williams North Atlanta, and both work every sale.</p>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/team.jpg') }}" alt="Karen Hilliard and Britney Javens of The Legacy Team seated together" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="statement">Most teams split clients between agents. We split the map. Whoever knows your streets leads, and the other reads every contract, covers every showing she can't make, and picks up the phone when the first one is at a closing.</p>
+  </div>
+</section>
+
+<section class="section on-stone" id="karen">
+  <div class="wrap split even">
+    <div class="portrait"><img src="{{ a('img/karen.jpg') }}" alt="Karen Hilliard, luxury and Lake Lanier Realtor" width="800" height="1000" loading="lazy" /></div>
+    <div class="stack">
+      <h2 class="display d2">Karen Hilliard</h2>
+      <p class="lede">Luxury, Lake Lanier, the mountains and land.</p>
+      <div class="prose">
+        <p>Karen has lived on Lake Lanier for more than twelve years, and her practice started there. She now leads our estate, waterfront, mountain and land work, from Milton and Alpharetta to deep-water homes on Lanier and cabins in Blue Ridge.</p>
+        <p>Before real estate she worked in construction management. She reads a lot the way a builder does, walks new construction at each stage, and checks docks, wells and septic systems before a client commits. She is licensed in Georgia and in Florida, where she also works with buyers and sellers in Destin and along the Emerald Coast.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Reviews</dt><dd>5.0 across {{ people.karen.reviews }} Google reviews</dd></div>
+        <div><dt>Licensed in</dt><dd>Georgia and Florida</dd></div>
+        <div><dt>Phone</dt><dd><a class="link" href="tel:{{ people.karen.tel }}">{{ people.karen.phone }}</a></dd></div>
+        <div><dt>Email</dt><dd><a class="link" href="mailto:{{ people.karen.email }}">{{ people.karen.email }}</a></dd></div>
+        <div><dt>Her own site</dt><dd><a class="link" href="{{ people.karen.site }}" target="_blank" rel="noopener">northgaluxuryrealtor.com</a></dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="britney">
+  <div class="wrap split even">
+    <div class="stack">
+      <h2 class="display d2">Britney Javens</h2>
+      <p class="lede">North Atlanta and intown.</p>
+      <div class="prose">
+        <p>Britney leads our work from Buckhead and Brookhaven up the GA-400 corridor through Roswell, Johns Creek, Alpharetta and Milton to Cumming. She has more than four years in North Atlanta real estate and a background in flipping and renovating homes, so she can tell a buyer what a house needs and what that will cost to fix.</p>
+        <p>She runs our digital marketing and listing presentation, and clients know her for fast replies and steady follow-through in a fast market.</p>
+      </div>
+      <dl class="facts">
+        <div><dt>Reviews</dt><dd>5.0 across {{ people.britney.reviews }} Google reviews</dd></div>
+        <div><dt>Experience</dt><dd>Four-plus years, plus home renovation</dd></div>
+        <div><dt>Phone</dt><dd><a class="link" href="tel:{{ people.britney.tel }}">{{ people.britney.phone }}</a></dd></div>
+        <div><dt>Email</dt><dd><a class="link" href="mailto:{{ people.britney.email }}">{{ people.britney.email }}</a></dd></div>
+        <div><dt>Her own site</dt><dd><a class="link" href="{{ people.britney.site }}" target="_blank" rel="noopener">northatlantarealtor.homes</a></dd></div>
+      </dl>
+    </div>
+    <div class="portrait"><img src="{{ a('img/britney.jpg') }}" alt="Britney Javens, North Atlanta Realtor" width="800" height="1000" loading="lazy" /></div>
+  </div>
+</section>
+
+<section class="section on-dark">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">How the two of us work a sale.</h2>
+      <p class="soft">The same four things hold whether you are buying a first townhome in Chamblee or selling an estate on the lake.</p>
+    </div>
+    <ul class="items">
+      <li><h3 class="display d4">The local one leads</h3><p>Britney leads south of the lake and Karen leads on it and north of it. In Alpharetta, Milton and Cumming we divide by property type.</p></li>
+      <li><h3 class="display d4">Both of us know your file</h3><p>Either of us can answer your question, show the house or handle the counteroffer. You do not wait for one person's calendar.</p></li>
+      <li><h3 class="display d4">A builder's eye and a renovator's eye</h3><p>Karen's construction management background and Britney's renovation experience mean we look hard at the structure, the systems and the land.</p></li>
+      <li><h3 class="display d4">Family manners</h3><p>We treat clients the way we would want our own family treated: told the truth, called back, and never pushed.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Keller Williams North Atlanta.</h2>
+    <div class="prose lede">
+      <p>We are affiliated with Keller Williams Realty North Atlanta, on North Point Parkway in Alpharetta. Keller Williams is the largest real estate franchise in the world by agent count, and its referral network sends relocating and out-of-state buyers to North Georgia.</p>
+      <p>You get that reach behind your listing, from two agents who answer their own phones. Each Keller Williams office is independently owned and operated.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

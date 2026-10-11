@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Journal | North Georgia Real Estate Notes from The Legacy Team{% endblock %}
+{% block description %}Notes from Karen Hilliard and Britney Javens on buying and selling luxury, lake and mountain property across North Atlanta and North Georgia.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero plain">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Journal</li></ol>
+      <h1 class="display d1">Journal.</h1>
+      <p class="lede">What we are seeing and what we tell clients, written by the two of us.</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap">
+    {% if posts %}
+    <div class="posts">
+      {% for p in posts %}
+      <article>
+        <time datetime="{{ p.date.isoformat() }}">{{ p.date | longdate }}</time>
+        <h2 class="display d3"><a href="{{ u(p.url) }}">{{ p.title }}</a></h2>
+        <p class="soft">{{ p.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p class="lede">The first entries are on their way. Until then, start with the <a class="link" href="{{ u('/communities/') }}">communities we work</a>.</p>
+    {% endif %}
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}{{ p.title }} | The Legacy Team{% endblock %}
+{% block description %}{{ p.description }}{% endblock %}
+{% block og_type %}article{% endblock %}
+{% block content %}
+<section class="on-dark page-hero plain">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li><a href="{{ u('/journal/') }}">Journal</a></li></ol>
+      <h1 class="display d2">{{ p.title }}</h1>
+      <p class="soft">{{ p.date | longdate }}, by {% if p.author_person %}<a class="link" href="{{ u('/team/') }}">{{ p.author_person.name }}</a>{% else %}<a class="link" href="{{ u('/team/') }}">Karen Hilliard and Britney Javens</a>{% endif %}</p>
+    </div>
+  </div>
+</section>
+<section class="section">
+  <div class="wrap"><div class="article">{{ p.body_html }}</div></div>
+</section>
+{% endblock %}

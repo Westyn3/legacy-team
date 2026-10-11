@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Buy a Home in North Atlanta or Lake Lanier | The Legacy Team{% endblock %}
+{% block description %}How The Legacy Team represents buyers from Buckhead to Blue Ridge: consultation, search, offer, inspections and closing, with two Realtors on your side.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Buy</li></ol>
+      <h1 class="display d1">Buying with us.</h1>
+      <p class="lede">A walkable address in Buckhead, a gated estate in Milton, a dock on Lanier or a ridge in Blue Ridge. We represent buyers across all of it, and one of us already knows the streets.</p>
+      <div class="actions"><a class="btn" href="#contact">Book a buyer consultation</a><a class="btn btn-ghost" href="{{ u('/#search') }}">Search homes</a></div>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/interior.jpg') }}" alt="Open kitchen and living room in a newly finished home" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">From first call to keys.</h2>
+      <p class="soft">Six steps, in order. We go through the buyer representation agreement with you at the start, so you know what we do for you and how we are paid before you tour a single home.</p>
+    </div>
+    <ol class="steps">
+      <li><h3 class="display d4">Consultation</h3><p>We talk through your goals, timing, budget and must-haves, and review the buyer representation agreement together. Our compensation is spelled out there and is often negotiated as part of your offer.</p></li>
+      <li><h3 class="display d4">Pre-approval</h3><p>We introduce you to a local lender we trust. In a competitive market, a pre-approval letter is what makes a seller take your offer seriously.</p></li>
+      <li><h3 class="display d4">A search built for you</h3><p>We set up a search on your criteria and tour only the homes that fit, including the ones we hear about before they reach the MLS.</p></li>
+      <li><h3 class="display d4">The offer</h3><p>When the right home appears we move quickly. We shape price, terms and timeline to win it without overpaying.</p></li>
+      <li><h3 class="display d4">Due diligence</h3><p>Inspections, repair negotiations and, where they apply, the wells, septic systems, docks and outbuildings a standard inspection can miss.</p></li>
+      <li><h3 class="display d4">Closing</h3><p>We manage the appraisal, the final walkthrough and the paperwork through signing day.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section on-stone">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">What you are buying changes what we check.</h2>
+      <p class="soft">The house is only part of it. These are the questions we answer before your due diligence period ends.</p>
+    </div>
+    <ul class="items">
+      <li><h3 class="display d4">Estates and gated communities</h3><p>Mechanical systems, pools, outbuildings and permits scale with the home. Karen's construction background is the advantage here. <a class="link" href="{{ u('/luxury-homes/') }}">Luxury homes</a></p></li>
+      <li><h3 class="display d4">Lake Lanier waterfront</h3><p>Dock permits belong to the property and not every lot can have one. We verify the permit and the water depth before you offer. <a class="link" href="{{ u('/lake-lanier/') }}">Lake Lanier</a></p></li>
+      <li><h3 class="display d4">Mountain homes and cabins</h3><p>Slope, road access, wells and septic, and whether the property suits the way you plan to use it. <a class="link" href="{{ u('/blue-ridge/') }}">Blue Ridge</a></p></li>
+      <li><h3 class="display d4">New construction</h3><p>The builder's agent works for the builder. We review the contract and walk the build with you. <a class="link" href="{{ u('/cumming/') }}">Cumming</a></p></li>
+      <li><h3 class="display d4">Intown homes, condos and townhomes</h3><p>Buckhead, Brookhaven, Sandy Springs and Chamblee, where Britney's renovation experience helps you price what a home needs. <a class="link" href="{{ u('/buckhead/') }}">Buckhead</a></p></li>
+      <li><h3 class="display d4">Land and lots</h3><p>Perc tests, topography, road frontage and zoning decide what a lot is worth. <a class="link" href="{{ u('/land-and-lots/') }}">Land and lots</a></p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Moving here from out of state.</h2>
+    <div class="prose lede">
+      <p>Many of our buyers are relocating and cannot be here for every step. We run video tours, coordinate inspections and due diligence remotely, and help you compare communities, schools and commutes across North Fulton, Forsyth, Hall and Dawson counties before you fly in.</p>
+      <p>If you are still deciding between the city, the lake and the mountains, start with the <a href="{{ u('/communities/') }}">communities we work</a>, listed south to north.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}

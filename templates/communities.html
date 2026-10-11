@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}North Georgia Communities, Buckhead to Blue Ridge | The Legacy Team{% endblock %}
+{% block description %}Eighteen communities The Legacy Team sells by name: intown Atlanta, North Fulton and Forsyth, Lake Lanier and the North Georgia mountains.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero plain">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Communities</li></ol>
+      <h1 class="display d1">Where we work.</h1>
+      <p class="lede">{{ ordered | length }} communities, listed south to north. Britney leads the city and the GA-400 suburbs, Karen leads the lake and the mountains, and we share Alpharetta, Milton and Cumming.</p>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+  {% for r in regions %}
+  <section class="region">
+    <div class="head" style="margin-bottom:0">
+      <h2 class="display d2">{{ r.name }}</h2>
+      <p class="soft">{{ r.lead_line }}</p>
+    </div>
+    <ul class="clist">
+      {% for c in r['items'] %}
+      <li><a href="{{ u(c.url) }}"><h3 class="display d3">{{ c.name }}</h3><p>{{ c.county }}</p><p>{{ c.known_for | join(', ') }}</p></a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% endfor %}
+</div>
+{% endblock %}

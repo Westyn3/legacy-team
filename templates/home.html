@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% block title %}The Legacy Team | Luxury Realtors, North Atlanta to Lake Lanier{% endblock %}
+{% block description %}Karen Hilliard and Britney Javens of Keller Williams North Atlanta: luxury homes, Lake Lanier waterfront and mountain property from Buckhead to Blue Ridge.{% endblock %}
+{% block head %}<link rel="preload" as="image" href="{{ a('img/lake-aerial.jpg') }}" />{% endblock %}
+{% block content %}
+
+<section class="hero on-dark">
+  <video autoplay muted loop playsinline preload="metadata" poster="{{ a('img/lake-aerial.jpg') }}" aria-hidden="true">
+    <source src="{{ a('video/lake.mp4') }}" type="video/mp4" />
+  </video>
+  <div class="wrap">
+    <h1 class="display d1">
+      <small>North Georgia luxury real estate</small>
+      <span class="line"><span>From Buckhead</span></span>
+      <span class="line"><span>to Blue Ridge.</span></span>
+    </h1>
+    <div class="hero-foot">
+      <p>Karen Hilliard and her daughter Britney Javens sell the city, the lake and the mountains as one team, with two Realtors on every sale.</p>
+      <div class="actions">
+        <a class="btn" href="#search">Search homes</a>
+        <a class="btn btn-ghost" href="#contact">Talk to us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <p class="statement">Searches move. A buyer who starts in Alpharetta can end up on a cove in Gainesville, and a Milton seller's next purchase may be a cabin in Blue Ridge. We are one team for the whole way north, so you are never handed off.</p>
+    <dl class="figures">
+      <div><dt>{{ site.total_reviews }}</dt><dd>five-star Google reviews between us, {{ people.karen.reviews }} for Karen and {{ people.britney.reviews }} for Britney, at a 5.0 average.</dd></div>
+      <div><dt>2</dt><dd>Realtors on every sale. One leads your market, and the other knows your file.</dd></div>
+      <div><dt>{{ ordered | length }}</dt><dd>communities we work by name, across the city, Lake Lanier and the mountains.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<section class="section on-dark" id="corridor">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">One road north, and we know every exit.</h2>
+      <p class="soft">GA-400 and I-985 carry you from Buckhead to the lake and on to the mountains. These are the places we sell along the way. Choose one for prices, neighborhoods and the questions buyers ask us there.</p>
+    </div>
+    <div class="route">
+      {% for r in regions %}
+      <div class="route-group" style="--n: {{ r['items'] | length }}">
+        <ol class="route-stops">
+          {% for c in r['items'] %}
+          <li><a href="{{ u(c.url) }}">{{ c.name }}</a></li>
+          {% endfor %}
+        </ol>
+        <div class="route-cap">
+          <h3>{{ r.name }}</h3>
+          <p>{{ r.lead_line }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="route-ends"><span>South</span><span>North</span></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">Mother and daughter. Two specialists.</h2>
+      <p class="soft">Karen has lived on Lake Lanier for more than twelve years and came to real estate from construction management. Britney has four-plus years in North Atlanta real estate and a background in flipping and renovating homes. <a class="link" href="{{ u('/team/') }}">Read how we work together</a>.</p>
+    </div>
+    <div class="duo">
+      {% for key in ['karen', 'britney'] %}
+      {% set p = people[key] %}
+      <figure>
+        <img src="{{ a('img/' + p.photo) }}" alt="{{ p.name }}, Realtor with The Legacy Team at Keller Williams North Atlanta" width="800" height="1000" loading="lazy" />
+        <figcaption>
+          <h3 class="display d3">{{ p.name }}</h3>
+          <p class="role">{{ p.role }}</p>
+          <p class="contact"><a class="link" href="tel:{{ p.tel }}">{{ p.phone }}</a><a class="link" href="mailto:{{ p.email }}">{{ p.email }}</a></p>
+        </figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="section on-stone">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">What we sell most.</h2>
+      <p class="soft">Each kind of property needs its own due diligence. An estate has wells, barns and systems to check. A lake lot needs a dock permit. A cabin sits on a slope. We bring the right one of us to each.</p>
+    </div>
+    <div class="tiles">
+      <a class="tile" href="{{ u('/luxury-homes/') }}">
+        <img src="{{ a('img/modern-estate.jpg') }}" alt="Modern estate home on a wide lawn in North Georgia" loading="lazy" />
+        <div><h3 class="display d3">Luxury homes and estates</h3><p>Milton horse country, gated golf in Alpharetta and Cumming, and Buckhead addresses.</p></div>
+      </a>
+      <a class="tile" href="{{ u('/lake-lanier/') }}">
+        <img src="{{ a('img/lake-estate.jpg') }}" alt="Brick estate with a private dock on Lake Lanier" loading="lazy" />
+        <div><h3 class="display d3">Lake Lanier waterfront</h3><p>Deep water, permitted docks and the right side of the lake.</p></div>
+      </a>
+      <a class="tile" href="{{ u('/land-and-lots/') }}">
+        <img src="{{ a('img/mountain-farm.jpg') }}" alt="Aerial view of pasture and foothills in the North Georgia mountains" loading="lazy" />
+        <div><h3 class="display d3">Mountain property and land</h3><p>Cabins, acreage and lots, read the way a builder reads them.</p></div>
+      </a>
+      <a class="tile" href="{{ u('/buy/') }}">
+        <img src="{{ a('img/interior.jpg') }}" alt="Open kitchen and living room in a newly finished home" loading="lazy" />
+        <div><h3 class="display d3">New construction and intown homes</h3><p>From Buckhead condos to new builds in Forsyth County.</p></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section on-dark on-deep">
+  <div class="wrap quote">
+    <blockquote>“Every step of the process in finding and buying our home was made easy, stress free, and exciting with Karen! … Extremely professional, enthusiastic, but most importantly she got us the keys to our dream home.”</blockquote>
+    <cite>Patrick Riordan, Google review</cite>
+    <p class="mt"><a class="btn btn-ghost" href="{{ u('/reviews/') }}">Read all {{ site.total_reviews }} reviews</a></p>
+  </div>
+</section>
+
+<section class="section" id="search">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">Search every listing on Georgia MLS.</h2>
+      <p class="soft">Start with the search for your part of the corridor, then send us the homes you want to see.</p>
+    </div>
+    <div class="pair">
+      <div>
+        <h3 class="display d3">Intown and North Atlanta</h3>
+        <p class="soft">Buckhead, Brookhaven, Sandy Springs, Roswell, Johns Creek, Alpharetta, Milton and Cumming.</p>
+        <div class="actions"><a class="btn" href="{{ people.britney.idx }}" target="_blank" rel="noopener">Search North Atlanta</a></div>
+      </div>
+      <div>
+        <h3 class="display d3">Lake Lanier and the mountains</h3>
+        <p class="soft">Buford, Flowery Branch, Gainesville, Dawsonville, Dahlonega and Blue Ridge.</p>
+        <div class="actions"><a class="btn" href="{{ people.karen.idx }}" target="_blank" rel="noopener">Search the lake and mountains</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% if posts %}
+<section class="section-tight">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">From the journal.</h2>
+      <p><a class="link" href="{{ u('/journal/') }}">All journal entries</a></p>
+    </div>
+    <div class="posts">
+      {% for p in posts[:3] %}
+      <article>
+        <time datetime="{{ p.date.isoformat() }}">{{ p.date | longdate }}</time>
+        <h3 class="display d4"><a href="{{ u(p.url) }}">{{ p.title }}</a></h3>
+        <p class="soft">{{ p.description }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endif %}
+{% endblock %}

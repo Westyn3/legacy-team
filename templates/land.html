@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% block title %}North Georgia Land, Lots & Acreage | The Legacy Team{% endblock %}
+{% block description %}Lake Lanier lots, mountain tracts and buildable acreage in North Georgia, evaluated by The Legacy Team's Karen Hilliard with a construction manager's eye.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Land and lots</li></ol>
+      <h1 class="display d1">Land, lots and acreage.</h1>
+      <p class="lede">Lakefront lots on Lanier, view tracts in Dawson and Fannin counties, and buildable acreage across Forsyth and Hall. Karen worked in construction management, and she evaluates land before you buy it.</p>
+      <div class="actions"><a class="btn" href="{{ people.karen.idx }}" target="_blank" rel="noopener">Search land and lots</a><a class="btn btn-ghost" href="#contact">Speak with Karen</a></div>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/mountain-farm.jpg') }}" alt="Aerial view of pasture, a pond and foothills in North Georgia" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <div>
+      <dl class="facts">
+        <div><dt>Counties</dt><dd>Forsyth, Hall, Dawson, Lumpkin, Cherokee and Fannin</dd></div>
+        <div><dt>We check</dt><dd>Perc test, water, topography, access, zoning</dd></div>
+        <div><dt>On the lake</dt><dd>Dock eligibility and shoreline buffer</dd></div>
+        <div><dt>Who leads</dt><dd>Karen Hilliard, <a class="link" href="tel:{{ people.karen.tel }}">{{ people.karen.phone }}</a></dd></div>
+      </dl>
+    </div>
+    <div class="prose lede">
+      <p>Two lots can sit side by side, look the same, and be worth very different amounts. A lot is worth what it can support: soil that passes a perc test, a well site or county water, a slope that takes a foundation and a driveway without heavy grading, road frontage, and zoning or covenants that allow what you want to build.</p>
+      <p>Karen helps buyers judge buildability and estimate site costs before the contract is firm. On Lake Lanier she confirms dock eligibility and shoreline buffer rules with the Corps of Engineers, since those decide whether a lakefront lot works the way a buyer expects.</p>
+      <p>We also sell land. Family acreage, a lake lot, a mountain tract or a parcel that can be subdivided: we market it to builders, investors and end buyers with the survey, soil data and site information they ask for first.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section on-stone">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">Where the land is.</h2>
+      <p class="soft">Four kinds of property make up most of what we see.</p>
+    </div>
+    <ul class="items">
+      <li><h3 class="display d4">Lake Lanier lots</h3><p>Lakefront and lake-view homesites in Gainesville, Cumming, Flowery Branch and Dawsonville. <a class="link" href="{{ u('/lake-lanier/') }}">Lake Lanier</a></p></li>
+      <li><h3 class="display d4">Mountain view tracts</h3><p>Acreage and view lots in Dawson, Lumpkin and Fannin counties, from Big Canoe and Blue Ridge to the ridges around Dahlonega. <a class="link" href="{{ u('/blue-ridge/') }}">Blue Ridge</a>, <a class="link" href="{{ u('/dahlonega/') }}">Dahlonega</a></p></li>
+      <li><h3 class="display d4">Forsyth and Hall acreage</h3><p>Estate lots and parcels that can be subdivided in two fast-growing counties. <a class="link" href="{{ u('/cumming/') }}">Cumming</a>, <a class="link" href="{{ u('/gainesville/') }}">Gainesville</a></p></li>
+      <li><h3 class="display d4">Equestrian and farm land</h3><p>Pasture and horse property in Milton, Cherokee County and the foothills. <a class="link" href="{{ u('/milton/') }}">Milton</a>, <a class="link" href="{{ u('/dawsonville/') }}">Dawsonville</a></p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section on-dark on-deep">
+  <div class="wrap quote">
+    <blockquote>“I look at a lot and see the driveway, the septic field, and the foundation before I see the view. The view is why you buy it. The rest is what it costs.”</blockquote>
+    <cite>Karen Hilliard</cite>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Questions land buyers ask.</h2>
+    <div class="faq">
+      <details open><summary>Do I need a perc test?</summary><p>Where there is no sewer, which is most of North Georgia outside city limits, yes. The test measures how fast the soil absorbs water. It decides whether the lot can have a septic system and how large a home that system can serve. We write it into the contract as a contingency.</p></details>
+      <details><summary>How do I know a Lake Lanier lot can have a dock?</summary><p>The U.S. Army Corps of Engineers issues dock permits, and a permit belongs to the property. Karen confirms the permit status, the dock size allowed and the shoreline buffer rules with the Corps before a client commits.</p></details>
+      <details><summary>How much does a steep lot add to the cost of building?</summary><p>It can add six figures. Steep sites need engineered foundations, retaining walls, longer driveways and more grading. Karen helps you estimate the cost of the site before you pay for the view.</p></details>
+      <details><summary>Can you help me find a builder?</summary><p>Yes. We introduce land buyers to reputable local builders, review the construction contract and stay involved through the build.</p></details>
+    </div>
+  </div>
+</section>
+{% endblock %}

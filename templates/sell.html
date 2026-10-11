@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% block title %}Sell Your Home in North Georgia | The Legacy Team{% endblock %}
+{% block description %}List with The Legacy Team: pricing from true comparables, architectural and drone photography, video, and two Keller Williams Realtors on every sale.{% endblock %}
+{% block content %}
+<section class="on-dark page-hero">
+  <div class="wrap">
+    <div class="ph-text">
+      <ol class="crumbs"><li><a href="{{ u('/') }}">Home</a></li><li>Sell</li></ol>
+      <h1 class="display d1">Selling with us.</h1>
+      <p class="lede">We price from the right comparables, present your home the way its buyers expect to see it, and handle every showing and every offer ourselves.</p>
+      <div class="actions"><a class="btn" href="#contact">Request a home valuation</a></div>
+    </div>
+    <div class="ph-img"><img src="{{ a('img/lake-home.jpg') }}" alt="Aerial photograph of a lakefront home, the kind of drone image used in a listing" /></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">From valuation to closing.</h2>
+      <p class="soft">Six steps, in order. The valuation is free and carries no obligation.</p>
+    </div>
+    <ol class="steps">
+      <li><h3 class="display d4">Valuation</h3><p>A comparative market analysis built on recent sales of homes like yours. Lakefront is priced against lakefront and estates against estates, never against the county average.</p></li>
+      <li><h3 class="display d4">Preparation</h3><p>We walk the home with you and write a short plan: what to clear, what to stage, and which repairs will return more than they cost. We can refer the vendors.</p></li>
+      <li><h3 class="display d4">Photography and video</h3><p>Professional photography, drone aerials and a video walkthrough come standard on every listing.</p></li>
+      <li><h3 class="display d4">Marketing</h3><p>Georgia MLS and FMLS, syndication to the major portals, social campaigns, email to our buyer list and direct outreach to agents across North Georgia.</p></li>
+      <li><h3 class="display d4">Negotiation</h3><p>We weigh each offer on price, contingencies and closing timeline, and advise you on the strongest one overall.</p></li>
+      <li><h3 class="display d4">Closing</h3><p>Inspections, repair requests, appraisal and paperwork, managed through closing day.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="section on-dark">
+  <div class="wrap">
+    <div class="head">
+      <h2 class="display d2">How a luxury listing is marketed.</h2>
+      <p class="soft">Buyers at the top of this market shop online first, and many of them live out of state. The listing has to carry the property before anyone visits.</p>
+    </div>
+    <ul class="items">
+      <li><h3 class="display d4">Architectural and drone photography</h3><p>Aerials matter most for estate lots, golf-course homes and waterfront, where the setting is much of the value.</p></li>
+      <li><h3 class="display d4">Cinematic video</h3><p>A film of the home, the grounds and, on the lake, the dock and the view from the water.</p></li>
+      <li><h3 class="display d4">Staging guidance</h3><p>Advice room by room on what to keep, move and bring in before the photographer arrives.</p></li>
+      <li><h3 class="display d4">Relocation and out-of-state reach</h3><p>Exposure through our luxury and relocation contacts and the Keller Williams referral network.</p></li>
+      <li><h3 class="display d4">Portals and MLS</h3><p>Georgia MLS and FMLS, syndicated to Zillow, Realtor.com, Homes.com and other real estate sites.</p></li>
+      <li><h3 class="display d4">Every showing handled personally</h3><p>One of us is at the showing, so the buyer's questions get real answers.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap split">
+    <h2 class="display d2">Selling land, a lake home or a mountain property.</h2>
+    <div class="prose lede">
+      <p>Specialty property sells on information. For land we put the survey, soil data and site details in front of builders and buyers at the start. For a lake home we show the dock, the permit and the water. For a cabin we show access, systems and rental history where there is one.</p>
+      <p>Karen leads these listings. Read more about <a href="{{ u('/lake-lanier/') }}">Lake Lanier</a>, <a href="{{ u('/land-and-lots/') }}">land and lots</a> and <a href="{{ u('/luxury-homes/') }}">luxury homes</a>.</p>
+    </div>
+  </div>
+</section>
+{% endblock %}
