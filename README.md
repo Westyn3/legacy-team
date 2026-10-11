@@ -26,7 +26,7 @@ Schedule a journal post: give it a future `date`. The daily Action publishes it 
 
 ## Launch checklist
 
-1. Set `url` in `site.yml` to the real domain and `write_cname: true`.
+1. In `site.yml`: set `url` to the real domain, `base_path: ""` and `write_cname: true`. (Until then the site is a noindexed staging copy at westyn3.github.io/legacy-team/.)
 2. Repo Settings > Pages > Source: GitHub Actions. Point DNS at GitHub Pages.
 3. Add a GA4 ID to `site.yml`.
 4. In Formspree, allow the new domain on both forms (Karen `mvkokeva`, Britney `xjglzlno`), or create a team form and swap the IDs in `site.yml`.

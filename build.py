@@ -44,6 +44,7 @@ def main():
     site["url"] = site["url"].rstrip("/")
     site["year"] = TODAY.year
     site["total_reviews"] = sum(p["reviews"] for p in site["people"].values())
+    base = (site.get("base_path") or "").rstrip("/")
     out = ROOT / ("_preview" if args.preview else "_site")
     if out.exists():
         shutil.rmtree(out)
@@ -158,8 +159,10 @@ def main():
             graph.append(crumbs_ld([("Home", "/")] + trail))
         graph += extra_ld or []
         html = env.get_template(template).render(
-            path=path, depth=depth, canonical=absu(path), trail=trail or [], noindex=noindex,
+            path=path, depth=depth, canonical=absu(path), trail=trail or [], noindex=noindex or bool(base),
             schema={"@context": "https://schema.org", "@graph": graph}, **ctx)
+        if base and not args.preview:  # staging under a subfolder: prefix every root-relative link
+            html = re.sub(r'(href|src|poster)="/(?!/)', r'\1="' + base + '/', html)
         if args.preview:  # markdown bodies carry root-relative links; make them relative too
             def fix(m):
                 rel = m.group(1).strip("/")
@@ -213,7 +216,7 @@ def main():
         urls = "".join(f"  <url><loc>{absu(p)}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in built)
         (out / "sitemap.xml").write_text(
             f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
-        (out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {absu('/sitemap.xml')}\n")
+        (out / "robots.txt").write_text("User-agent: *\nDisallow: /\n" if base else f"User-agent: *\nAllow: /\n\nSitemap: {absu('/sitemap.xml')}\n")
         if site.get("write_cname"):
             (out / "CNAME").write_text(site["url"].split("//", 1)[1] + "\n")
 
