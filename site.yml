@@ -13,7 +13,7 @@ write_cname: true          # flip to true once the domain above is the real one
 # At launch: set base_path to "" and write_cname to true.
 base_path: ""
 
-ga_id: ""                   # Google Analytics 4 ID (G-XXXXXXX). Blank = no tracking tag.
+ga_id: "G-52H1D4363K"                   # Google Analytics 4 ID (G-XXXXXXX). Blank = no tracking tag.
 
 brokerage:
   name: "Keller Williams Realty North Atlanta"
