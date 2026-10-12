@@ -96,10 +96,10 @@ regions:
     communities: [buford, flowery-branch, gainesville, lake-lanier]
   - key: "mountains"
     name: "The mountains"
-    lead_line: "Karen leads, with a builder's eye for land and cabins."
+    lead_line: "Karen leads, from Dawsonville to Blairsville."
     image: "mountain-farm.jpg"
     image_alt: "Aerial view of pasture and foothills in the North Georgia mountains"
-    communities: [dawsonville, dahlonega, blue-ridge]
+    communities: [dawsonville, dahlonega, ellijay, blue-ridge, blairsville]
 
 # Optional per-community hero image overrides (otherwise the region image is used)
 community_images:

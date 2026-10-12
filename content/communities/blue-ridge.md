@@ -28,7 +28,7 @@ faqs:
     a: "Plan on about an hour and 45 minutes from downtown Atlanta. From Alpharetta it is roughly 90 minutes, following GA-400, GA-5 and Highway 515."
   - q: "What belongs on a cabin buyer's checklist?"
     a: "Look at road access and grade, and confirm whether the view holds all year. Check well and septic, internet availability, and any HOA or covenant limits on rentals. The state of the decks and exterior wood also matters, and Karen goes through each item with our clients."
-nearby: ["dahlonega", "dawsonville", "lake-lanier"]
+nearby: ["ellijay", "blairsville", "dahlonega", "dawsonville"]
 ---
 Blue Ridge sits at the top of the North Georgia mountains, in every sense. The downtown is walkable and stays busy in all seasons, with restaurants, galleries and breweries lining its streets. The Blue Ridge Scenic Railway departs from here and follows the Toccoa River. Around the town, Fannin County supplies what mountain buyers look for: long-range views, trout streams, Lake Blue Ridge and hundreds of thousands of acres of national forest.
 
