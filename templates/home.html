@@ -1,11 +1,12 @@
 {% extends "base.html" %}
-{% block title %}The Legacy Team | Luxury Realtors, North Atlanta to Lake Lanier{% endblock %}
+{% block title %}The Legacy Team | Luxury & Lake Lanier Realtors, North GA{% endblock %}
 {% block description %}Karen Hilliard and Britney Javens of Keller Williams North Atlanta: luxury homes, Lake Lanier waterfront and mountain property from Buckhead to Blue Ridge.{% endblock %}
 {% block head %}<link rel="preload" as="image" href="{{ a('img/lake-aerial.jpg') }}" />{% endblock %}
 {% block content %}
 
 <section class="hero on-dark">
   <video autoplay muted loop playsinline preload="metadata" poster="{{ a('img/lake-aerial.jpg') }}" aria-hidden="true">
+    <source src="{{ a('video/lake-mobile.mp4') }}" type="video/mp4" media="(max-width: 900px)" />
     <source src="{{ a('video/lake.mp4') }}" type="video/mp4" />
   </video>
   <div class="wrap">

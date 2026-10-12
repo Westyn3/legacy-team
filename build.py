@@ -168,6 +168,14 @@ def main():
         html = env.get_template(template).render(
             path=path, depth=depth, canonical=absu(path), trail=trail or [], noindex=noindex or bool(base),
             schema={"@context": "https://schema.org", "@graph": graph}, **ctx)
+        if '"FAQPage"' not in html and 'class="faq"' in html:  # FAQ sections on fixed pages (luxury, land)
+            qa = re.findall(r'<details[^>]*><summary>(.*?)</summary><p>(.*?)</p></details>', html, re.S)
+            if qa:
+                strip = lambda x: re.sub(r"<[^>]+>", "", x).replace("&#39;", "'").replace("&amp;", "&").strip()
+                faq = {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": strip(q),
+                       "acceptedAnswer": {"@type": "Answer", "text": strip(a)}} for q, a in qa]}
+                graph_json = json.dumps(faq, ensure_ascii=False, separators=(",", ":"))
+                html = html.replace('"@graph":[', '"@graph":[' + graph_json + ',', 1)
         if base and not args.preview:  # staging under a subfolder: prefix every root-relative link
             html = re.sub(r'(href|src|poster)="/(?!/)', r'\1="' + base + '/', html)
         if args.preview:  # markdown bodies carry root-relative links; make them relative too
