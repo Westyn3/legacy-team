@@ -5,13 +5,13 @@ tagline: "Luxury real estate from Buckhead to Blue Ridge"
 
 # TODO before launch: set the real domain (no trailing slash). The build writes CNAME,
 # canonicals, sitemap and schema from this one value.
-url: "https://www.thelegacyteamga.com"
-write_cname: false          # flip to true once the domain above is the real one
+url: "https://thelegacyteamkw.com"
+write_cname: true          # flip to true once the domain above is the real one
 
 # Staging: while there is no domain, the site lives at westyn3.github.io/legacy-team/.
 # base_path makes every link work under that subfolder and marks all pages noindex.
 # At launch: set base_path to "" and write_cname to true.
-base_path: "/legacy-team"
+base_path: ""
 
 ga_id: ""                   # Google Analytics 4 ID (G-XXXXXXX). Blank = no tracking tag.
 

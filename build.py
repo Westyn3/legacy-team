@@ -123,7 +123,7 @@ def main():
                 "memberOf": {"@id": team_id}, "sameAs": p["same_as"]}
 
     team_graph = [
-        {"@type": "RealEstateAgent", "@id": team_id, "name": "The Legacy Team at Keller Williams North Atlanta",
+        {"@type": "RealEstateAgent", "@id": team_id, "name": "The Legacy Team - Keller Williams North Atlanta",
          "alternateName": "The Legacy Team", "url": absu("/"), "image": absu("/assets/img/team.jpg"),
          "logo": absu("/assets/img/og.jpg"), "slogan": site["tagline"],
          "description": "Karen Hilliard and her daughter Britney Javens represent buyers and sellers of luxury homes, "
