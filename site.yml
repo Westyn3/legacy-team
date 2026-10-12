@@ -109,3 +109,26 @@ community_images:
   alpharetta: ["modern-estate.jpg", "Modern estate home on a lawn in North Georgia"]
   buckhead: ["townhomes.jpg", "Brick townhomes on an intown Atlanta street"]
   gainesville: ["lake-aerial.jpg", "Aerial view of Lake Lanier coves and docks"]
+
+# ── Google Business Profile ──────────────────────────────────────────
+# Keep these identical to the team's Google profile so Google sees one business.
+gbp:
+  url: "https://www.google.com/maps?cid=4137218282696829279"
+  hours: { opens: "07:00", closes: "21:00" }   # every day
+  extra_areas: ["Hall County, GA"]
+  description: "The Legacy Team at Keller Williams North Atlanta is Karen Hilliard and her daughter, Britney Javens: two Realtors on every sale, from Buckhead to Blue Ridge. Karen leads our luxury, Lake Lanier and mountain work. She has lived on the lake for more than twelve years and came to real estate from construction management, so she checks docks, water depth, wells and septic before you commit. Britney leads North Atlanta and intown, from Buckhead to Alpharetta, Milton and Cumming, with a background in renovating homes. We represent buyers and sellers of estates, golf communities, lakefront homes, mountain cabins, land and new construction across Gainesville, Buford, Flowery Branch, Dawsonville, Dahlonega, Ellijay, Blue Ridge and Blairsville."
+  services:
+    - ["Luxury property buying & sales", "/luxury-homes/", "Estates in Milton and Alpharetta, gated golf communities in Cumming, deep-water homes on Lake Lanier and long-view mountain homes. Priced on true luxury comparables, marketed with architectural and drone photography and cinematic video, and every showing handled by one of us."]
+    - ["Lake Lanier waterfront homes", "/lake-lanier/", "Karen has lived on Lake Lanier for more than twelve years. We verify the Corps of Engineers dock permit and water depth at full pool and winter levels before you offer, and match you to the right side of the lake: Gainesville, the south end or the north end."]
+    - ["Mountain homes & cabins", "/blue-ridge/", "Second homes, cabins and long-view properties in Dawsonville, Dahlonega, Ellijay, Blue Ridge and Blairsville. We check slope, road access, wells and septic before you commit, and help you weigh weekend use against short-term rental."]
+    - ["Equestrian estates & acreage", "/milton/", "Horse farms and estates on acreage in Milton and the North Georgia foothills. We look at barns, pastures, fencing, drainage, wells and septic, and the land-use rules that protect Milton's rural character."]
+    - ["Free home valuation", "/sell/", "A no-obligation valuation built on recent sales of comparable homes in your neighborhood. Lakefront is priced against lakefront and estates against estates, never against the county average."]
+    - ["Seller's agent services", "/sell/", "A free valuation from recent sales of homes like yours, a written prep and staging plan, professional photography, drone aerials and video on every listing, MLS and portal syndication, and two Realtors handling showings, offers and closing."]
+    - ["Buying agent services", "/buy/", "Two Realtors on your purchase from Buckhead to Blue Ridge. We set up a search on your criteria, tour the homes that fit, negotiate price and terms, and manage inspections and closing."]
+    - ["Building lot sales", "/land-and-lots/", "Lake lots, view lots and estate homesites evaluated before you buy: perc test, well or county water, slope, road frontage and zoning."]
+    - ["Land leasing & sales", "/land-and-lots/", "Acreage and parcels across Forsyth, Hall, Dawson, Lumpkin, Cherokee and Fannin counties, marketed with the survey, soil data and site details builders and investors ask for."]
+    - ["New construction sales & leasing", "/buy/", "We review the builder contract, walk the home at each stage with you, and represent you in new communities across Forsyth County, Alpharetta and the GA-400 corridor."]
+    - ["Relocation assistance", "/buy/", "Video tours, remote due diligence and help comparing communities, schools and commutes across North Fulton, Forsyth, Hall and Dawson counties."]
+    - ["First-time home buyer services", "/buy/", "Step-by-step guidance from pre-approval to closing, with introductions to local lenders we trust."]
+    - ["Real estate investing", "/contact/", "Rental, multifamily and income property in North Atlanta and North Georgia, plus mountain cabins bought for short-term rental."]
+    - ["Commercial property buying & sales", "/contact/", "Representation for buyers and sellers of commercial property in North Georgia through Keller Williams North Atlanta."]

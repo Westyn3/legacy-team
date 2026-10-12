@@ -122,22 +122,29 @@ def main():
                 "worksFor": {"@type": "Organization", "name": b["name"]},
                 "memberOf": {"@id": team_id}, "sameAs": p["same_as"]}
 
+    g = site["gbp"]
     team_graph = [
         {"@type": "RealEstateAgent", "@id": team_id, "name": "The Legacy Team - Keller Williams North Atlanta",
          "alternateName": "The Legacy Team", "url": absu("/"), "image": absu("/assets/img/team.jpg"),
          "logo": absu("/assets/img/og.jpg"), "slogan": site["tagline"],
-         "description": "Karen Hilliard and her daughter Britney Javens represent buyers and sellers of luxury homes, "
-                        "Lake Lanier waterfront, mountain property and land from Buckhead to Blue Ridge, Georgia.",
+         "description": g["description"], "hasMap": g["url"],
+         "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
+             "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+             "opens": g["hours"]["opens"], "closes": g["hours"]["closes"]}],
+         "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Real estate services", "itemListElement": [
+             {"@type": "Offer", "itemOffered": {"@type": "Service", "name": n, "description": d, "url": absu(u),
+                                                "provider": {"@id": team_id}}} for n, u, d in g["services"]]},
          "telephone": site["people"]["karen"]["tel"], "email": site["people"]["karen"]["email"], "priceRange": "$$$",
          "address": {"@type": "PostalAddress", "streetAddress": b["street"], "addressLocality": b["city"],
                      "addressRegion": b["state"], "postalCode": b["zip"], "addressCountry": "US"},
          "geo": {"@type": "GeoCoordinates", "latitude": b["lat"], "longitude": b["lng"]},
-         "areaServed": [{"@type": "Place", "name": f"{c['name']}, GA"} for c in ordered],
+         "areaServed": [{"@type": "Place", "name": f"{c['name']}, GA"} for c in ordered]
+                       + [{"@type": "AdministrativeArea", "name": a} for a in g.get("extra_areas", [])],
          "knowsAbout": ["Luxury real estate", "Lake Lanier waterfront homes", "North Georgia mountain homes",
                         "Equestrian estates", "Land and lot sales", "New construction", "Relocation to North Georgia"],
          "parentOrganization": {"@type": "Organization", "name": b["name"], "telephone": b["tel"]},
          "employee": [{"@id": absu("/team/#karen")}, {"@id": absu("/team/#britney")}],
-         "sameAs": [site["social"]["instagram"], site["social"]["kw_team"],
+         "sameAs": [g["url"], site["social"]["instagram"], site["social"]["kw_team"],
                     site["people"]["karen"]["site"], site["people"]["britney"]["site"]]},
         person("karen"), person("britney"),
         {"@type": "WebSite", "@id": absu("/#website"), "name": site["name"], "url": absu("/"), "publisher": {"@id": team_id}},
