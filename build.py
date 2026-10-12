@@ -126,7 +126,7 @@ def main():
     team_graph = [
         {"@type": "RealEstateAgent", "@id": team_id, "name": "The Legacy Team - Keller Williams North Atlanta",
          "alternateName": "The Legacy Team", "url": absu("/"), "image": absu("/assets/img/team.jpg"),
-         "logo": absu("/assets/img/og.jpg"), "slogan": site["tagline"],
+         "logo": absu("/assets/img/logo.png"), "slogan": site["tagline"],
          "description": g["description"], "hasMap": g["url"],
          "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -197,6 +197,7 @@ def main():
     render("land.html", "/land-and-lots/", trail=[("Land and lots", "/land-and-lots/")])
     render("reviews.html", "/reviews/", trail=[("Reviews", "/reviews/")])
     render("contact.html", "/contact/", trail=[("Contact", "/contact/")])
+    render("vendors.html", "/trusted-vendors/", trail=[("Trusted vendors", "/trusted-vendors/")])
     render("communities.html", "/communities/", trail=[("Communities", "/communities/")])
     render("404.html", "/404.html", noindex=True)
 
@@ -218,6 +219,13 @@ def main():
 
     # ── Static files ─────────────────────────────────────────────────────
     shutil.copytree(ROOT / "assets", out / "assets")
+    for f in (ROOT / "static").glob("*"):  # files served from the site root (favicon.ico)
+        shutil.copy(f, out / f.name)
+    (out / "site.webmanifest").write_text(json.dumps({
+        "name": site["name"], "short_name": "Legacy Team", "start_url": "/", "display": "standalone",
+        "background_color": "#cb102c", "theme_color": "#081d1c",
+        "icons": [{"src": "/assets/img/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                  {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}))
     (out / ".nojekyll").write_text("")
     if not args.preview:
         urls = "".join(f"  <url><loc>{absu(p)}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in built)

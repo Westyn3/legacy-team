@@ -132,3 +132,81 @@ gbp:
     - ["First-time home buyer services", "/buy/", "Step-by-step guidance from pre-approval to closing, with introductions to local lenders we trust."]
     - ["Real estate investing", "/contact/", "Rental, multifamily and income property in North Atlanta and North Georgia, plus mountain cabins bought for short-term rental."]
     - ["Commercial property buying & sales", "/contact/", "Representation for buyers and sellers of commercial property in North Georgia through Keller Williams North Atlanta."]
+
+# ── Trusted vendors (shown on /trusted-vendors/, in this order) ───────
+vendors:
+  - group: "Websites, marketing and business systems"
+    items:
+      - name: "Knoxline Systems"
+        contact: "Westyn Hilliard"
+        phone: "(865) 566-2168"
+        url: "https://www.knoxlinesystems.com/?utm_source=thelegacyteamkw&utm_medium=referral&utm_campaign=trusted-vendors"
+        text: "Knoxline built this website. Westyn builds websites, runs local SEO and Google Business Profile work, manages Google Ads, and automates reporting and CRM systems for real estate and home-service businesses across the Southeast. If you own a business and want more leads from Google, start with him."
+  - group: "Mortgage and lending"
+    items:
+      - name: "Onward Mortgage"
+        contact: "Thomas Cady"
+        phone: "(770) 298-1198"
+        url: "https://www.onwardhomemortgage.com/"
+        text: "Thomas keeps financing clear from pre-approval to closing, for first-time buyers and experienced investors alike, and finds the loan that fits the purchase."
+      - name: "Homeowners Financial Group"
+        contact: "Matt Quagliana"
+        phone: "(770) 885-6060"
+        url: "https://homeownersfg.com/location/atlanta-central/"
+        text: "Matt takes the time to understand what you are buying and why, matches you with the right financing, and stays reachable through the whole loan."
+  - group: "Land, septic and grading"
+    items:
+      - name: "ALLCON"
+        contact: "Ralph Hilliard"
+        phone: "(678) 410-0310"
+        url: "https://allconga.com/"
+        text: "More than 35 years of septic installation, land grading and clearing, and track building in North Georgia. If you are buying land or building new, Ralph is the first call."
+  - group: "Roofing"
+    items:
+      - name: "1st Response Roofing"
+        contact: "Cody Hall"
+        phone: "(678) 602-6641"
+        url: "https://www.1stresponseroofco.com/"
+        text: "Inspections, repairs and full replacements from Cody and his team. Worth a call before you list and after you close."
+  - group: "Plumbing"
+    items:
+      - name: "Aquaworks Plumbing"
+        contact: "Jesse Adkins"
+        phone: "(770) 718-8799"
+        url: "https://aquaworksservice.com/"
+        text: "Jesse handles everything from routine repairs to larger plumbing projects, on time and done properly."
+  - group: "Electrical"
+    items:
+      - name: "Jeff, licensed electrician"
+        contact: ""
+        phone: "(678) 251-7767"
+        url: ""
+        text: "Our first call for pre-listing repairs through full rewiring. Reliable, fairly priced, and right the first time."
+  - group: "Handyman and general contracting"
+    items:
+      - name: "Armando"
+        contact: ""
+        phone: "(404) 935-3224"
+        url: ""
+        text: "Pre-listing punch lists through full renovations, done with care. One of the vendors we refer most."
+  - group: "Flooring"
+    items:
+      - name: "Mr. Hardwood"
+        contact: ""
+        phone: "(678) 217-5800"
+        url: "https://mrhardwoodinc.com/"
+        text: "Hardwood installation, refinishing and repair. Good floors are one of the first things buyers notice."
+  - group: "Fencing"
+    items:
+      - name: "Norwood Fencing"
+        contact: "Jerious Norwood"
+        phone: "(678) 837-8342"
+        url: "https://norwoodfence.com/"
+        text: "Privacy, security and curb-appeal fencing, built well and finished on schedule."
+  - group: "Tree services"
+    items:
+      - name: "LS Trees"
+        contact: "Marcelo"
+        phone: "(770) 616-6079"
+        url: "https://lstreesllc.com/"
+        text: "Tree removal, trimming, stump grinding and land clearing, with real care for the rest of your property."

@@ -12,6 +12,10 @@
   <link rel="canonical" href="{{ canonical }}" />
   <meta name="robots" content="{{ 'noindex, follow' if noindex else 'index, follow' }}" />
   <meta name="theme-color" content="#081d1c" />
+  <link rel="icon" href="{{ u('/favicon.ico') }}" sizes="any" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ a('img/favicon-32.png') }}" />
+  <link rel="apple-touch-icon" href="{{ a('img/apple-touch-icon.png') }}" />
+  <link rel="manifest" href="{{ u('/site.webmanifest') }}" />
   <meta property="og:type" content="{% block og_type %}website{% endblock %}" />
   <meta property="og:site_name" content="{{ site.name }}" />
   <meta property="og:title" content="{{ self.title() }}" />
@@ -57,6 +61,7 @@
     <a href="{{ u(href) }}">{{ label }}</a>
     {% endfor %}
     <a href="{{ u('/reviews/') }}">Reviews</a>
+    <a href="{{ u('/trusted-vendors/') }}">Trusted vendors</a>
     <a href="{{ u('/contact/') }}">Contact</a>
   </nav>
   <div class="menu-contact">
@@ -85,6 +90,7 @@
         <a href="{{ u('/luxury-homes/') }}">Luxury homes</a>
         <a href="{{ u('/land-and-lots/') }}">Land and lots</a>
         <a href="{{ u('/reviews/') }}">Reviews</a>
+        <a href="{{ u('/trusted-vendors/') }}">Trusted vendors</a>
       </div>
       <div>
         <h2>Communities</h2>
@@ -107,7 +113,7 @@
         <img src="{{ a('img/kw-logo.png') }}" alt="Keller Williams" width="73" height="40" />
         <p>{{ site.brokerage.name }}, {{ site.brokerage.street }}, {{ site.brokerage.city }}, {{ site.brokerage.state }} {{ site.brokerage.zip }}. Office <a href="tel:{{ site.brokerage.tel }}">{{ site.brokerage.phone }}</a>. Each office is independently owned and operated. Karen Hilliard is licensed in Georgia and Florida.</p>
       </div>
-      <p>&copy; {{ site.year }} The Legacy Team. Website by <a href="https://knoxlinesystems.com" target="_blank" rel="noopener">Knoxline Systems</a>.</p>
+      <p>&copy; {{ site.year }} The Legacy Team. Website by <a href="https://www.knoxlinesystems.com/?utm_source=thelegacyteamkw&amp;utm_medium=referral&amp;utm_campaign=footer-credit" target="_blank" rel="noopener">Knoxline Systems</a>.</p>
     </div>
   </div>
 </footer>
