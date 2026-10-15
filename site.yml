@@ -115,7 +115,8 @@ community_images:
 gbp:
   url: "https://www.google.com/maps?cid=4137218282696829279"
   hours: { opens: "07:00", closes: "21:00" }   # every day
-  extra_areas: ["Hall County, GA"]
+  opened: "2022-10"                             # opening date on the profile
+  extra_areas: ["Woodstock, GA"]
   description: "The Legacy Team at Keller Williams North Atlanta is Karen Hilliard and her daughter, Britney Javens: two Realtors on every sale, from Buckhead to Blue Ridge. Karen leads our luxury, Lake Lanier and mountain work. She has lived on the lake for more than twelve years and came to real estate from construction management, so she checks docks, water depth, wells and septic before you commit. Britney leads North Atlanta and intown, from Buckhead to Alpharetta, Milton and Cumming, with a background in renovating homes. We represent buyers and sellers of estates, golf communities, lakefront homes, mountain cabins, land and new construction across Gainesville, Buford, Flowery Branch, Dawsonville, Dahlonega, Ellijay, Blue Ridge and Blairsville."
   services:
     - ["Luxury property buying & sales", "/luxury-homes/", "Estates in Milton and Alpharetta, gated golf communities in Cumming, deep-water homes on Lake Lanier and long-view mountain homes. Priced on true luxury comparables, marketed with architectural and drone photography and cinematic video, and every showing handled by one of us."]

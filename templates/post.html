@@ -2,6 +2,11 @@
 {% block title %}{% if p.title | length > 44 %}{{ p.title }}{% else %}{{ p.title }} | The Legacy Team{% endif %}{% endblock %}
 {% block description %}{{ p.description }}{% endblock %}
 {% block og_type %}article{% endblock %}
+{% block head %}
+  <meta property="article:published_time" content="{{ p.date.isoformat() }}" />
+  <meta property="article:author" content="{{ p.author_person.name if p.author_person else 'Karen Hilliard and Britney Javens' }}" />
+  <meta property="article:section" content="{{ p.section if p.section else 'North Georgia real estate' }}" />
+{% endblock %}
 {% block content %}
 <section class="on-dark page-hero plain">
   <div class="wrap">

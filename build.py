@@ -127,7 +127,7 @@ def main():
         {"@type": "RealEstateAgent", "@id": team_id, "name": "The Legacy Team - Keller Williams North Atlanta",
          "alternateName": "The Legacy Team", "url": absu("/"), "image": absu("/assets/img/team.jpg"),
          "logo": absu("/assets/img/logo.png"), "slogan": site["tagline"],
-         "description": g["description"], "hasMap": g["url"],
+         "description": g["description"], "hasMap": g["url"], "foundingDate": g["opened"],
          "openingHoursSpecification": [{"@type": "OpeningHoursSpecification",
              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
              "opens": g["hours"]["opens"], "closes": g["hours"]["closes"]}],
@@ -139,7 +139,7 @@ def main():
                      "addressRegion": b["state"], "postalCode": b["zip"], "addressCountry": "US"},
          "geo": {"@type": "GeoCoordinates", "latitude": b["lat"], "longitude": b["lng"]},
          "areaServed": [{"@type": "Place", "name": f"{c['name']}, GA"} for c in ordered]
-                       + [{"@type": "AdministrativeArea", "name": a} for a in g.get("extra_areas", [])],
+                       + [{"@type": "Place", "name": a} for a in g.get("extra_areas", [])],
          "knowsAbout": ["Luxury real estate", "Lake Lanier waterfront homes", "North Georgia mountain homes",
                         "Equestrian estates", "Land and lot sales", "New construction", "Relocation to North Georgia"],
          "parentOrganization": {"@type": "Organization", "name": b["name"], "telephone": b["tel"]},
@@ -236,6 +236,19 @@ def main():
                   {"src": "/assets/img/icon-512.png", "sizes": "512x512", "type": "image/png"}]}))
     (out / ".nojekyll").write_text("")
     if not args.preview:
+        from xml.sax.saxutils import escape as x
+        updated = (posts[0]["date"] if posts else TODAY).isoformat() + "T08:00:00-05:00"
+        entries = "".join(
+            f'  <entry>\n    <title>{x(p["title"])}</title>\n    <link href="{absu(p["url"])}"/>\n'
+            f'    <id>{absu(p["url"])}</id>\n    <published>{p["date"].isoformat()}T08:00:00-05:00</published>\n'
+            f'    <updated>{p["date"].isoformat()}T08:00:00-05:00</updated>\n'
+            f'    <author><name>{x(p["author_person"]["name"] if p["author_person"] else "Karen Hilliard and Britney Javens")}</name></author>\n'
+            f'    <summary>{x(p["description"])}</summary>\n  </entry>\n' for p in posts)
+        (out / "feed.xml").write_text(
+            f'<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">\n'
+            f'  <title>The Legacy Team Journal</title>\n  <subtitle>North Georgia luxury and Lake Lanier real estate notes from Karen Hilliard and Britney Javens</subtitle>\n'
+            f'  <link href="{absu("/feed.xml")}" rel="self"/>\n  <link href="{absu("/journal/")}"/>\n'
+            f'  <id>{absu("/journal/")}</id>\n  <updated>{updated}</updated>\n{entries}</feed>\n')
         urls = "".join(f"  <url><loc>{absu(p)}</loc><lastmod>{d.isoformat()}</lastmod></url>\n" for p, d in built)
         (out / "sitemap.xml").write_text(
             f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}</urlset>\n')
