@@ -1,5 +1,6 @@
 ---
 title: "Long-view mountain homes and what I check at the top of the market"
+seo_title: "What I check on a long-view mountain home"
 date: 2026-12-18
 author: karen
 description: "Long-range-view homes in Blue Ridge, Achasta in Dahlonega and Big Canoe, and how I judge views, slope, road access and systems on a luxury mountain home."

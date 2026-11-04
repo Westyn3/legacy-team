@@ -1,5 +1,6 @@
 ---
 title: "How I market a seven-figure listing, from pricing to showings"
+seo_title: "How I market a seven-figure listing"
 date: 2026-11-20
 author: karen
 description: "The steps I follow to sell a seven-figure home: pricing on true luxury comparables, staging, photography, film, out-of-state reach and private showings."

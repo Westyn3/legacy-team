@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}{% if p.title | length > 44 %}{{ p.title }}{% else %}{{ p.title }} | The Legacy Team{% endif %}{% endblock %}
+{% block title %}{% set t = p.seo_title or p.title %}{% if t | length > 42 %}{{ t }}{% else %}{{ t }} | The Legacy Team{% endif %}{% endblock %}
 {% block description %}{{ p.description }}{% endblock %}
 {% block og_type %}article{% endblock %}
 {% block head %}

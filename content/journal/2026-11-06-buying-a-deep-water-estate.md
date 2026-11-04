@@ -1,5 +1,6 @@
 ---
 title: "Buying a deep-water estate on Lake Lanier, beyond the house itself"
+seo_title: "Buying a deep-water estate on Lake Lanier"
 date: 2026-11-06
 author: karen
 description: "Why water depth at full pool and at winter levels shapes a Lake Lanier estate's value, and what I check on the cove, dock, slope, well and septic."
