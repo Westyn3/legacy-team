@@ -1,5 +1,6 @@
 ---
 title: "City, lake or mountains: choosing where to live north of Atlanta"
+seo_title: "City, lake or mountains: where to live north of Atlanta"
 date: 2026-10-11
 author: team
 description: "Three very different ways to live within two hours of Atlanta, and the questions that tell us which one fits you."

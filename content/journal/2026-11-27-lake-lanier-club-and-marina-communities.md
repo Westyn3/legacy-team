@@ -1,5 +1,6 @@
 ---
 title: "Lake Lanier's club and marina communities, and who each one suits"
+seo_title: "Lake Lanier's club and marina communities"
 date: 2026-11-27
 author: karen
 description: "What Harbour Point, Marina Bay, Chattahoochee Country Club, Cresswind, Chestatee and Sterling on the Lake offer, and the buyer each one suits."

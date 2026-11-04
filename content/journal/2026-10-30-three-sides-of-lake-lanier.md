@@ -1,5 +1,6 @@
 ---
 title: "Three sides of Lake Lanier and the luxury buyer each one suits"
+seo_title: "Three sides of Lake Lanier, and which buyer each suits"
 date: 2026-10-30
 author: karen
 description: "How the Gainesville side, the south end near Buford and Flowery Branch, and the north end of Lake Lanier differ, and which luxury buyer each one suits."

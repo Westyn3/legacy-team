@@ -5,6 +5,7 @@ One file per post: content/journal/YYYY-MM-DD-slug.md (slug: lowercase words joi
 ```
 ---
 title: "..."            # 45-70 characters, sentence case, no colon-then-reveal, no clickbait
+seo_title: "..."        # optional; only when title is over 60 characters. Shorter version (max 60) used in the browser tab / Google result
 date: YYYY-MM-DD        # a Friday, exactly as assigned
 author: karen           # karen | britney | team
 description: "..."      # 120-155 characters, plain statement of what the reader learns
