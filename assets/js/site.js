@@ -41,6 +41,7 @@
       fetch(endpoint, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } })
         .then(function (res) {
           if (!res.ok) throw new Error('send failed');
+          if (typeof gtag === 'function') gtag('event', 'generate_lead', { agent: who, page_path: location.pathname });
           form.reset();
           status.textContent = 'Message sent. One of us will be in touch soon.';
           status.classList.add('show');
@@ -53,4 +54,18 @@
         });
     });
   }
+})();
+
+// GA4 lead tracking: taps on phone and email links (same event names as the agents' own sites).
+(function () {
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href^="tel:"], a[href^="mailto:"]');
+    if (!a || typeof gtag !== 'function') return;
+    var href = a.getAttribute('href') || '';
+    var isTel = href.indexOf('tel:') === 0;
+    gtag('event', isTel ? 'phone_call_click' : 'email_click', {
+      link_target: href.replace(/^(tel:|mailto:)/, ''),
+      page_path: location.pathname
+    });
+  });
 })();
